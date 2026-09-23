@@ -1,0 +1,66 @@
+\section{Dimensjonering, logistikk og operasjonsmodell}
+\label{sec:dimensjonering}
+
+Beregningene under demonstrerer at en beskjeden andel av meieriflåten har tilstrekkelig hydraulisk og logistisk kapasitet til å dekke en hel regions vannbehov.
+
+\subsection{Matematisk omløpsmodell}
+Modellen bygger på empiriske driftsparametere fra norsk tankbiltransport:
+\begin{itemize}[leftmargin=1.5em, itemsep=0.15em]
+    \item Tankvolum ($V$): \SI{20}{\cubic\meter} (\SI{20000}{\liter}).
+    \item Avstand ($d$): \SI{30}{\kilo\meter} én vei (\SI{60}{\kilo\meter} tur/retur kilde).
+    \item Gjennomsnittsfart ($v$): \SI{50}{\kilo\meter\per\hour} (inkludert flomomkjøringer).
+\end{itemize}
+
+Total syklustid per rotasjon ($T_{\text{rot}}$) defineres ved:
+\begin{equation}
+    T_{\text{rot}} = t_{\text{fyll}} + t_{\text{transitt}} + t_{\text{loss}} + t_{\text{buffer}}
+    \label{eq:syklus}
+\end{equation}
+hvor leddene kvantifiseres som følger:
+\begin{align*}
+    t_{\text{fyll}} &= \frac{V}{Q_{\text{pumpe}}} = \frac{\SI{20000}{\liter}}{\SI{1200}{\liter\per\minute}} \approx \SI{17}{\minute}, \\
+    t_{\text{transitt}} &= \frac{2d}{v} = \frac{\SI{60}{\kilo\meter}}{\SI{50}{\kilo\meter\per\hour}} = \SI{1.2}{\hour} = \SI{72}{\minute}, \\
+    t_{\text{loss}} &\approx \SI{90}{\minute} \quad (\text{vektet snitt mellom Linje A og B}), \\
+    t_{\text{buffer}} &\approx \SI{46}{\minute} \quad (\text{slangetilkobling, hygieneinspeksjon, pause}).
+\end{align*}
+Dette gir $T_{\text{rot}} = 17 + 72 + 90 + 46 = \SI{225}{\minute} = \SI{3.75}{\hour}$.
+
+I en to-skifts døgnoperasjon gjennomfører hver bil konservativt $n = 3$ omløp per døgn, som gir $V_{\text{døgn,bil}} = 3 \cdot \SI{20000}{\liter} = \SI{60000}{\liter}$. Mobiliseres $N = 15$ melketankbiler, oppnås:
+\begin{equation}
+    V_{\text{total}} = N \cdot V_{\text{døgn,bil}} = 15 \cdot \SI{60000}{\liter} = \SI{900000}{\liter\per\text{døgn}}.
+    \label{eq:totalvolum}
+\end{equation}
+
+Ved \textsc{dsb}s basale krisebehov på $q_{\text{basal}} = \SI{3}{\liter}$ per person per døgn dekker systemet:
+\begin{equation*}
+    P_{\text{dekket}} = \frac{\SI{900000}{\liter}}{\SI{3}{\liter\per\text{person}}} = \num{300000}\text{ personer}.
+\end{equation*}
+For en by med \num{75000} innbyggere gir dette en sikkerhetsfaktor på 4.0, eller \SI{12}{\liter} per person per døgn inkludert basal hygiene og helsestell.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Dimensjonerende nøkkelparametre for Prosjekt Meierikjeden.}
+\label{tab:parametre}
+\begin{tabularx}{\textwidth}{lXr}
+\toprule
+\textbf{Parameter} & \textbf{Fysisk betydning / Grunnlag} & \textbf{Verdi} \\
+\midrule
+Tankvolum per bil ($V$) & Syrefast termosbeholder (\textsc{aisi} 316L) & \SI{20}{\cubic\meter} (\SI{20000}{\liter}) \\
+Flåtestørrelse ($N$) & Mobiliserte biler (turnusreserver og buffer) & 15 enheter \\
+Pumpekapasitet ($Q_{\text{pumpe}}$) & Sanitær impellerpumpe & \SI{1200}{\liter\per\minute} \\
+Omløpstid ($T_{\text{rot}}$) & Inkluderer fylling, \SI{60}{\kilo\meter} transitt og lossing & \SI{3.75}{\hour} \\
+Rotasjoner per bil ($n$) & Konservativ skiftdrift & 3 omløp/døgn \\
+\textbf{Total døgnleveranse} & \textbf{Flåtens samlede sterile vannvolum} & \textbf{\SI{900000}{\liter\per\text{døgn}}} \\
+Befolkningsdekning ($P_{\text{dekket}}$) & Ved \textsc{dsb} basalrasjon (\SI{3}{\liter}/person/døgn) & \num{300000} pers. \\
+Sikkerhetsfaktor ($SF$) & By med \num{75000} innbyggere & 4.0x \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{To-spors operasjonsmodell (Triage-distribusjon)}
+Flåten opererer etter en todelt fordelingsmodell:
+\begin{itemize}[leftmargin=1.5em, itemsep=0.2em]
+    \item \textbf{Linje A: Kritiske helseinstitusjoner (30 \% / 5 biler):} Prioritert leveranse til akuttsykehus og dialyseenheter. Bilene pumper vann direkte inn i byggenes reservebassenger på under 20 minutter via egne trykkpumper, uten manuelt bærearbeid.
+    \item \textbf{Linje B: Desentraliserte sivile knutepunkter (70 \% / 10 biler):} Plasseres ved skolegårder og idrettshaller. Med AquaFeed-riggens 10 tappepunkter ekspederes opptil 800 personer i timen per bil. En rullerende stafett hindrer køkollaps.
+\end{itemize}

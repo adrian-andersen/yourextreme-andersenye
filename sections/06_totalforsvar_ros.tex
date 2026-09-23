@@ -1,0 +1,46 @@
+\section{Samarbeidsmodell, Totalforsvar og ROS-analyse}
+\label{sec:totalforsvar}
+
+For at systemet skal aktiveres på under to timer, etableres et forankret offentlig-privat samvirke (\textsc{ops}) innenfor rammen av det norske Totalforsvaret.
+
+\subsection{Totalforsvarsmodellen og ansvarsfordeling}
+Konseptet forankres i et formalisert grensesnitt mellom tre aktører:
+\begin{itemize}[leftmargin=1.5em, itemsep=0.2em]
+    \item \textbf{Meieriaktørene (TINE og Q-Meieriene):} Stiller tankbiler, sjåfører og \textsc{cip}-stasjoner til disposisjon via forhåndsavtaler, og omdirigerer biler via sine telematikksentraler.
+    \item \textbf{Tilsynsmyndigheter (Mattilsynet og \textsc{fhi}):} Etablerer forhåndsgodkjente kriserutiner. Digital \textsc{cip}-logg og negative hurtigtester (\textsc{atp} og kasein/myse) fungerer som umiddelbar friskmelding.
+    \item \textbf{Kommunal kriseledelse, Sivilforsvaret og Røde Kors:} Klargjør reservefyllepunkter og drifter de sivile utdelingsstasjonene med kanistedistribusjon, desinfeksjonssluse og køavvikling.
+\end{itemize}
+
+\subsection{Avbøting av konflikt med melkeinnsamling og dyrevelferd}
+Melkekyr lakterer kontinuerlig, og gårdstanker fylles opp på 48 timer. Stans i melkehenting skaper akutte dyrevelferdsproblemer (mastitt), truer nødslakt og medfører melkedumping. Prosjektet løser dette med en to-faset flåtestyringsmodell:
+\begin{enumerate}[leftmargin=1.5em, itemsep=0.15em]
+    \item \textbf{Fase 1: Akuttfasen (første 12--24 timer):} Behovet på 15 biler dekkes utelukkende ved å mobilisere turnusreserver, biler på verkstedbuffer og overskuddskapasitet fra tilgrensende regioner. Ingen ordinære melkeruter berøres.
+    \item \textbf{Fase 2: Langvarig krise ($> 24$ timer):} TINE og Q-Meieriene aktiverer unntaksruter med samkjøring og systematisk overgang til henting annenhver dag (48-timerssyklus) der gårdstankene har tilstrekkelig reservevolum.
+\end{enumerate}
+Gjennom sivilbeskyttelsesloven har livreddende vannforsyning juridisk forrang, men logistikkmodellen sikrer at dyrevelferden og melkeverdiene ivaretas fullt ut.
+
+\subsection{Risiko- og sårbarhetsanalyse (ROS)}
+Systemets operative robusthet og barrierer er evaluert i tabell~\ref{tab:ros}.
+
+\begin{table}[htbp]
+\centering
+\footnotesize
+\caption{Risiko- og sårbarhetsanalyse (\textsc{ros}) for Prosjekt Meierikjeden.}
+\label{tab:ros}
+\begin{tabularx}{\textwidth}{p{2.6cm}p{3.2cm}ccX}
+\toprule
+\textbf{Risikohendelse} & \textbf{Konsekvens} & \textbf{S} & \textbf{K} & \textbf{Forebyggende barrierer} \\
+\midrule
+Konflikt med melkeinnsamling & Gårdstanker overfylles; melkedumping og mastitt. & L & H & To-faset flåtestyring; verkstedreserver; 48t unntaksruter. \\
+\addlinespace
+Frost i tapperigg og ventiler & Manifold fryser ved kuldegrader; stans i drift. & M & M & Integrert \SI{24}{\volt} (\SI{150}{\watt}) varmekabel; hurtigtømmende bunnventiler. \\
+\addlinespace
+Krysskontaminering ved sivil tappefront & Patogener fra skitne kanner infiserer tapperigg. & M & H & Tilbakeslagsventiler; berøringsfrie dyser; utdeling av foldekanistere; sprit-sluse. \\
+\addlinespace
+Svikt i veiinfrastruktur / aksellast & Biler (32--50t) hindres av flomskadde broer/ras. & M & H & Sanntidskobling mot \textsc{vts}; ruting kun på godkjente \textsc{bk}10-korridorer. \\
+\addlinespace
+Melkeprotein- og allergenrester & Allergisk reaksjon hos sensitive pasienter. & L & K & Alkalisk hydrolyse under \textsc{cip}; to-trinns hurtigtest (\textsc{atp} + lateral-flow, $< \SI{1}{ppm}$). \\
+\bottomrule
+\multicolumn{5}{l}{\textit{S: Sannsynlighet (L/M/H). K: Konsekvens (M/H/K: Middels, Høy, Kritisk).}}
+\end{tabularx}
+\end{table}

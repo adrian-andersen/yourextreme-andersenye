@@ -1,0 +1,165 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Tegnsett, språk og typografi ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[norsk]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+
+% --- Sideoppsett og marger ---
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{setspace}
+\setstretch{1.12}
+
+% --- Grafikk, farger og tabeller ---
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{enumitem}
+
+% --- Matematikk og tekniske enheter ---
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\sisetup{
+    output-decimal-marker = {,},
+    exponent-product = \cdot,
+    group-separator = {\,}
+}
+
+% --- Bokser og fremheving ---
+\usepackage[most]{tcolorbox}
+
+% --- Fargedefinisjoner ---
+\definecolor{navyblue}{RGB}{11, 60, 93}
+\definecolor{accentblue}{RGB}{0, 102, 204}
+\definecolor{darkgray}{RGB}{60, 64, 67}
+\definecolor{lightgray}{RGB}{245, 247, 250}
+\definecolor{boxbg}{RGB}{248, 250, 252}
+
+% --- Topp- og bunntekst ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsf{\color{darkgray}Kongsberg Your Extreme 2026 \textbar\ Oppgave 1: «Når vi må bruke det vi har»}}
+\fancyhead[R]{\small\textsf{\color{navyblue}\textbf{Prosjekt Meierikjeden}}}
+\fancyfoot[C]{\small\textsf{\color{darkgray}Side \thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- Overskriftstyling ---
+\usepackage{titlesec}
+\titleformat{\section}
+  {\color{navyblue}\normalfont\Large\bfseries\sffamily}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\color{navyblue}\normalfont\large\bfseries\sffamily}
+  {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\color{navyblue}\normalfont\normalsize\bfseries\sffamily}
+  {\thesubsubsection}{1em}{}
+
+% --- Bildetekster ---
+\captionsetup{
+    font=small,
+    labelfont={bf, color=navyblue},
+    labelsep=period,
+    margin=1cm
+}
+
+% --- Hyperlenker ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=navyblue,
+    citecolor=accentblue,
+    urlcolor=accentblue,
+    pdfauthor={Your Extreme Gruppe},
+    pdftitle={Prosjekt Meierikjeden - Your Extreme 2026},
+    pdfsubject={Sivil beredskap og gjenbruk av næringsmiddelinfrastruktur}
+}
+
+% =========================================================================
+% DOKUMENTSTART
+% =========================================================================
+\begin{document}
+
+% --- FORSIDE ---
+\begin{titlepage}
+    \centering
+    \vspace*{0.5cm}
+    
+    {\small\textsf{\textbf{\color{navyblue}KONGSBERG GRUPPEN \textbar\ CASEKONKURRANSE YOUR EXTREME 2026}}\par}
+    {\small\textsf{\color{darkgray}Oppgave 1: «Når vi må bruke det vi har»}\par}
+    
+    \vspace{2.0cm}
+    \hrule height 2pt
+    \vspace{0.6cm}
+    
+    {\Huge\bfseries\sffamily\color{navyblue} Prosjekt Meierikjeden \par}
+    \vspace{0.4cm}
+    {\Large\sffamily Mobil og steril drikkevannsforsyning gjennom sivil næringsmiddelinfrastruktur \par}
+    
+    \vspace{0.6cm}
+    \hrule height 0.8pt
+    \vspace{1.5cm}
+    
+    {\large\textsf{\textbf{Gjenbruk av automatiserte CIP-anlegg og melketankbilflåten som nasjonal beredskapsforsyning ved akutt biologisk vannforurensning}}\par}
+    
+    \vfill
+    
+    \begin{tcolorbox}[colback=lightgray, colframe=navyblue, width=0.9\textwidth, arc=2mm]
+    \centering
+    \small\sffamily
+    \textbf{Faglig profil og kjernekonsept:}\\
+    Maskinteknisk innovasjon (\textit{AquaFeed Manifold}) kombinert med næringsmiddelteknologi (CIP), mikrobiologisk/allergen-barrierestyring og dynamisk to-faset flåtelogistikk innenfor rammen av det norske Totalforsvaret.
+    \end{tcolorbox}
+    
+    \vspace{1.5cm}
+    
+    \begin{minipage}{0.48\textwidth}
+        \flushleft
+        \small\textsf{\textbf{Innlevert av:}}\\
+        \textsf{Prosjektgruppe Meierikjeden}\\
+        \textsf{Your Extreme 2026}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \flushright
+        \small\textsf{\textbf{Dato:}}\\
+        \textsf{Høst 2026}\\
+        \textsf{Kongsberg, Norge}
+    \end{minipage}
+
+    \vspace{0.5cm}
+\end{titlepage}
+
+% --- INNHOLD OG MODULÆRE SEKSJONER ---
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{sections/00_abstract.tex}
+\newpage
+
+\input{sections/01_scenariet.tex}
+
+\input{sections/02_kjerneteknologi.tex}
+
+\input{sections/03_innovasjonen.tex}
+
+\input{sections/04_kildestrategi.tex}
+
+\input{sections/05_dimensjonering.tex}
+
+\input{sections/06_totalforsvar_ros.tex}
+
+\input{sections/07_konklusjon.tex}
+
+\vspace{1.5cm}
+\input{sections/08_ki_erklaring.tex}
+
+\end{document}

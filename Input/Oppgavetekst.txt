@@ -1,35 +1,6 @@
-Oppgaven 
-2026
+Maksimalt 2500 ord
 
-2
-Det er lov å bruke KI i arbeidet med oppgavebesvarelsen, men dere må opplyse om
-hvordan det er brukt.
-Vi anbefaler at dere utvikler selve ideen på egen hånd, og først og fremst bruker KI til
-research, sparring og renskriving. Ideer som i stor grad er generert av KI, blir ofte ganske
-like. Vi ønsker å se deres perspektiver, kreativitet og faglige vurderinger.
-Krav til innleveringene
-Bruk av KI
-Dere velger selv hvordan dere vil levere besvarelsen:
-Tekstdokument: maksimalt 2500 ord
-Presentasjon: maksimalt 25 slides
-Video: maksimalt 10 minutter
-Podcast: maksimalt 10 minutter
-Bruk gjerne skisser, modeller, demonstrasjoner eller prototyper for å gjøre løsningen
-enkel å forstå.
-Format og begrensninger
-For å bli invitert til årets awardskveld må besvarelsen holde et visst kvalitetsnivå. Det skal
-være tydelig at gruppen har lagt arbeid i innsendelsen og jobbet grundig med ideen,
-research og beskrivelsen av løsningen.
-Lykke til! 
-Med vennlig hilsen 
-KONGSBERG
-Invitasjon til awardskvelden
-I årets Your Extreme skal du velge én av de to oppgavene.
-Begge oppgavene vurderes etter de samme kriteriene og
-vektes likt i konkurransen.
-
-3
-Oppgavealternativ 1: 
+Oppgavealternativ 1:
 Når vi må bruke det vi har
 Se for dere at det skjer noe alvorlig i samfunnet: Det kan være en naturkatastrofe, et
 omfattende strømbrudd, svikt i kritisk infrastruktur, akutt mangel på viktige ressurser,
@@ -56,44 +27,3 @@ ikke beskrive alle tekniske detaljer. Det viktigste er at vi forstår ideen, hvo
 fungerer, og hvorfor den kan utgjøre en forskjell.
 Vi vektlegger originale ideer og ønsker å se løsninger dere selv har tenkt ut og jobbet
 videre med.
-
-
-4
-Oppgavealternativ 2: 
-«Teknologiskaperne»
-Teknologien utvikler seg raskt, og land over hele verden konkurrerer om kompetansen,
-ideene og løsningene som skal forme fremtiden. Skal Norge henge med, kan vi ikke bare
-være gode til å ta i bruk teknologi som andre har utviklet. Vi må også skape den selv.
-I årene fremover trenger Norge flere bein å stå på for å skape vekst og nye arbeidsplasser.
-Da er vi avhengige av mennesker som forstår teknologi, ser nye muligheter, og klarer å
-gjøre ideer om til løsninger. For å sikre oss denne kompetansen må interessen for
-teknologi vekkes tidlig i barns oppvekst.
-Men mange barn opplever teknologi først og fremst som noe de bare bruker: De spiller,
-ser videoer og kommuniserer gjennom ferdige løsninger, uten nødvendigvis å forstå
-hvordan teknologien fungerer, hvem som lager den, eller at de selv kan være med på å
-forme den.
-Hvordan kan vi gi barn et tidligere og mer skapende møte med teknologi, uavhengig av
-kjønn, bakgrunn og hvor i landet de vokser opp?
-Oppgave:
-Utvikle et konsept som skal skape nysgjerrighet, mestring og teknologiforståelse blant
-barn og unge.
-Løsningen skal la barn utforske, bygge, teste eller løse noe ved hjelp av teknologi. Den kan
-for eksempel være en fysisk opplevelse, et digitalt verktøy, et undervisningsopplegg, et
-spill, et byggesett eller en kombinasjon av flere ting.
-Oppgaveteksten fortsetter på neste side.
-
-
-5
-Beskriv følgende:
-Gi en overordnet konseptuell beskrivelse av ideen.
-Hva barna skal oppleve eller gjøre?
-Hvilken teknologi står sentralt i løsningen?
-Hvordan gjør konseptet teknologi forståelig, relevant og morsomt?
-Hvordan vil dere nå barn med ulike interesser, forutsetninger og bakgrunner?
-Hvordan kan løsningen tas i bruk av barn over hele Norge?
-Reflekter over hvordan vi potensielt kan få løsningen inn i skoleverket.
-Dere trenger ikke utvikle en komplett løsning. Vi ser etter en tydelig og engasjerende idé
-som viser hvordan flere barn kan gå fra å være brukere av teknologi til å bli nysgjerrige
-skapere av den.
-Målet er ikke at alle skal bli teknologer. Målet er at alle skal få muligheten til å oppdage at
-de kan bli det.

@@ -58,6 +58,7 @@
 
 % --- Bokser og fremheving ---
 \usepackage[most]{tcolorbox}
+\tcbuselibrary{skins}
 
 % --- Fargedefinisjoner ---
 \definecolor{navyblue}{RGB}{11, 60, 93}
@@ -142,14 +143,18 @@
     % --- Sentral illustrasjon ---
     \begin{center}
     \begin{tcolorbox}[
-        width=0.82\textwidth,
-        arc=2.5mm,
-        boxrule=1pt,
+        enhanced,
+        clip upper,
+        width=0.92\textwidth,
+        arc=3.5mm,
+        boxrule=1.2pt,
         colframe=navyblue,
-        colback=white,
+        colback=navyblue,
         boxsep=0pt,
         left=0pt, right=0pt, top=0pt, bottom=0pt,
-        halign=center
+        halign=center,
+        valign=center,
+        nobeforeafter
     ]
         \includegraphics[width=\linewidth, keepaspectratio]{figures/hero_forside.jpg}
     \end{tcolorbox}
@@ -180,8 +185,9 @@
         \textsf{Kongsberg, Norge}
     \end{minipage}
 
-    \vspace*{0.3cm}
+    \vspace*{0.2cm}
 \end{titlepage}
+\clearpage
 
 % --- INNHOLD OG MODULÆRE SEKSJONER ---
 \pagenumbering{arabic}

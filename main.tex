@@ -14,6 +14,7 @@
 
 % --- Grafikk, farger og tabeller ---
 \usepackage{graphicx}
+\graphicspath{{Figures/}{figures/}}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -78,6 +79,7 @@
     linkcolor=navyblue,
     citecolor=accentblue,
     urlcolor=accentblue,
+    linktoc=all,
     pdfauthor={Your Extreme Gruppe},
     pdftitle={Prosjekt Meierikjeden - Your Extreme 2026},
     pdfsubject={Sivil beredskap og gjenbruk av næringsmiddelinfrastruktur}
@@ -91,51 +93,57 @@
 % --- FORSIDE ---
 \begin{titlepage}
     \centering
-    \vspace*{0.5cm}
+    \vspace*{0.2cm}
     
     {\small\textsf{\textbf{\color{navyblue}KONGSBERG GRUPPEN \textbar\ CASEKONKURRANSE YOUR EXTREME 2026}}\par}
     {\small\textsf{\color{darkgray}Oppgave 1: «Når vi må bruke det vi har»}\par}
     
-    \vspace{2.0cm}
+    \vfill
+    
     \hrule height 2pt
-    \vspace{0.6cm}
+    \vspace{0.4cm}
     
     {\Huge\bfseries\sffamily\color{navyblue} Prosjekt Meierikjeden \par}
-    \vspace{0.4cm}
+    \vspace{0.3cm}
     {\Large\sffamily Mobil og steril drikkevannsforsyning gjennom sivil næringsmiddelinfrastruktur \par}
     
-    \vspace{0.6cm}
+    \vspace{0.4cm}
     \hrule height 0.8pt
-    \vspace{1.5cm}
+    \vspace{0.5cm}
     
-    {\large\textsf{\textbf{Gjenbruk av automatiserte CIP-anlegg og melketankbilflåten som nasjonal beredskapsforsyning ved akutt biologisk vannforurensning}}\par}
+    {\normalsize\textsf{\textbf{Gjenbruk av automatiserte CIP-anlegg og melketankbilflåten som nasjonal beredskapsforsyning ved akutt biologisk vannforurensning}}\par}
     
     \vfill
     
-    \begin{tcolorbox}[colback=lightgray, colframe=navyblue, width=0.9\textwidth, arc=2mm]
+    % --- Sentral illustrasjon ---
+    \includegraphics[width=0.65\textwidth, keepaspectratio]{Figures/yourextremehero.jpg}\par
+    
+    \vfill
+    
+    \begin{tcolorbox}[colback=lightgray, colframe=navyblue, width=0.92\textwidth, arc=2.5mm, boxrule=1pt, boxsep=1.5mm]
     \centering
     \small\sffamily
-    \textbf{Faglig profil og kjernekonsept:}\\
-    Maskinteknisk innovasjon (\textit{AquaFeed Manifold}) kombinert med næringsmiddelteknologi (CIP), mikrobiologisk/allergen-barrierestyring og dynamisk to-faset flåtelogistikk innenfor rammen av det norske Totalforsvaret.
+    \textbf{\color{navyblue}Faglig profil og kjernekonsept:}\\[0.2em]
+    Maskinteknisk innovasjon (\textit{AquaFeed Manifold}) kombinert med næringsmiddelteknologi (\textsc{cip}), mikrobiologisk/allergen-barrierestyring og dynamisk to-faset flåtelogistikk innenfor rammen av det norske Totalforsvaret.
     \end{tcolorbox}
     
-    \vspace{1.5cm}
+    \vfill
     
     \begin{minipage}{0.48\textwidth}
         \flushleft
-        \small\textsf{\textbf{Innlevert av:}}\\
+        \small\textsf{\textbf{\color{navyblue}Innlevert av:}}\\
         \textsf{Prosjektgruppe Meierikjeden}\\
         \textsf{Your Extreme 2026}
     \end{minipage}
     \hfill
     \begin{minipage}{0.48\textwidth}
         \flushright
-        \small\textsf{\textbf{Dato:}}\\
+        \small\textsf{\textbf{\color{navyblue}Dato:}}\\
         \textsf{Høst 2026}\\
         \textsf{Kongsberg, Norge}
     \end{minipage}
 
-    \vspace{0.5cm}
+    \vspace*{0.3cm}
 \end{titlepage}
 
 % --- INNHOLD OG MODULÆRE SEKSJONER ---
@@ -143,7 +151,12 @@
 \setcounter{page}{1}
 
 \input{sections/00_abstract.tex}
-\newpage
+\clearpage
+
+% --- INNHOLDSFORTEGNELSE ---
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
 
 \input{sections/01_scenariet.tex}
 

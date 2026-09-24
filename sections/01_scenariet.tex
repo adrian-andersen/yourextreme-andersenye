@@ -7,19 +7,15 @@ Norsk drikkevannsforsyning er basert på sårbare overflatekilder. Scenarioet ta
 Vannet kontamineres akutt med patogene mikroorganismer, primært \textit{Campylobacter jejuni}, enteropatogene \textit{Escherichia coli} og norovirus. Før rutineanalyser rekker å stanse distribusjonen, har smittestoffene spredt seg i rørnettet. Kommuneoverlegen beordrer umiddelbar stenging av nettet for konsum ledsaget av kokevarsel. Byen står overfor en akutt helse- og forsyningskrise.
 
 \subsection{Hvorfor etablert beredskap svikter}
-Når ledningsnettet settes ut av spill, kollapser tradisjonelle krisetiltak i løpet av timer:
-\begin{enumerate}[leftmargin=1.5em, itemsep=0.2em]
-    \item \textbf{Flaskevann-kollaps:} Dagligvarehandelen opererer med slanke «just-in-time»-lagre, og butikkhyller tømmes innen tre timer. Palltransport av flaskevann er logistisk ineffektivt grunnet emballasjevekt og dødvolum; å dekke dagsbehovet til \num{75000} innbyggere krever over 20 semitrailere daglig, med uoverkommelige trafikkpropper som resultat.
-    \item \textbf{Institusjonell lammelse:} Kokevarsel fungerer for friske husholdninger, men lammer helseinstitusjoner. Akuttsykehus, sykehjem og dialyseenheter krever titusenvis av liter sterilt vann daglig til pasientbehandling, sårstell, dialyse, hygiene og matproduksjon. Helseforetakene mangler kjelekapasitet og personell til storskala koking og nedkjøling.
-    \item \textbf{Forurenset kommunalt materiell:} Brann- og spylebiler kan ikke benyttes til drikkevann. Tanker og slanger inneholder rust, etablert biofilm samt giftige rester av kjemikalier og \textsc{pfas}-holdig slukkeskum som ikke lar seg dekontaminere i felten.
-    \item \textbf{Mangel på bulkbeholdere:} Kommuner disponerer knapt sertifiserte næringsmiddeltanker for bulktransport. Innleie tar dager, mens behovet for rent vann er akutt.
-\end{enumerate}
+Når det sentrale ledningsnettet settes ut av spill, kollapser samfunnets etablerte beredskapstiltak i løpet av få timer som følge av fundamentale logistiske og tekniske begrensninger. Dagligvarehandelen baserer seg på slanke «just-in-time»-lagre, noe som fører til at lokale butikkhyller tømmes for flaskevann innen tre timer. Samtidig er storskala nøddistribusjon av emballert vann logistisk uoverkommelig; å dekke det basale væskebehovet til \num{75000} innbyggere krever over 20 fullastede semitrailere daglig. Det enorme dødvolumet og vekten av plastemballasje skaper lammende trafikkpropper i et allerede overbelastet veinett.
 
-Dermed oppstår et livstruende kapasitetsgap: Byen trenger storskala distribusjon av sterilt drikkevann, men mangler mobile, godkjente beholdere. Som vist i figur~\ref{fig:kart} etablerer Prosjekt Meierikjeden en mobil forsyningskjede over vei som bypasser det forurensede rørnettet.
+Samtidig som sivilbefolkningen rammes, utløser et kokevarsel en umiddelbar institusjonell lammelse. Mens friske husholdninger kan koke eget vann, har helseinstitusjoner som akuttsykehus, sykehjem og dialyseenheter et uavbrutt behov for titusenvis av liter mikrobiologisk rent vann til pasientbehandling, dialyse, sårstell og matproduksjon. Helseforetakene disponerer verken personell eller kjelekapasitet til storskala koking og påfølgende nedkjøling. 
+
+Krisen forsterkes av at kommunene mangler egnet materiell for storskala bulkdistribusjon. Kommunale brann-, feie- og spylebiler er ubrukelige til drikkevannsformål, da deres tanker og slanger er kontaminert av rust, biofilm samt giftige kjemikalierester fra \textsc{pfas}-holdig slukkeskum som ikke lar seg dekontaminere i felten. Da norske kommuner knapt disponerer egne, sertifiserte næringsmiddeltanker, og ekstern innleie krever flere dagers mobiliseringstid, oppstår et akutt og livstruende kapasitetsgap: Byen har et skrikende behov for bulkdistribusjon av sterilt drikkevann, men mangler mobile, godkjente beholdere. Som vist i figur~\ref{fig:system_oversikt} løser Prosjekt Meierikjeden dette ved å etablere en mobil forsyningskjede over vei som fullstendig omgår det forurensede rørnettet.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\textwidth]{Figures/Kart_over_forskyningskjede.jpg}
     \caption{Systemarkitektur for Prosjekt Meierikjeden: Mobilisering av meieriflåten etablerer en «virtuell rørledning» over vei fra fire uavhengige reservekilder, med to-spors forsyning til sykehus (Linje A) og sivile utdelingspunkter (Linje B).}
-    \label{fig:kart}
+    \label{fig:system_oversikt}
 \end{figure}

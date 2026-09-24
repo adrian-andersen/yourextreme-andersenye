@@ -15,6 +15,30 @@
 % --- Grafikk, farger og tabeller ---
 \usepackage{graphicx}
 \graphicspath{{Figures/}{figures/}}
+
+% Sikre problemfri lasting på tvers av Linux/Overleaf og Windows (case-insensitive filstier)
+\makeatletter
+\let\orig@includegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{%
+  \IfFileExists{#2}{%
+    \orig@includegraphics[#1]{#2}%
+  }{%
+    \begingroup
+    \filename@parse{#2}%
+    \IfFileExists{Figures/\filename@base.\filename@ext}{%
+      \orig@includegraphics[#1]{Figures/\filename@base.\filename@ext}%
+    }{%
+      \IfFileExists{figures/\filename@base.\filename@ext}{%
+        \orig@includegraphics[#1]{figures/\filename@base.\filename@ext}%
+      }{%
+        \orig@includegraphics[#1]{#2}%
+      }%
+    }%
+    \endgroup
+  }%
+}
+\makeatother
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -118,23 +142,22 @@
     % --- Sentral illustrasjon ---
     \begin{center}
     \begin{tcolorbox}[
-        width=0.95\textwidth,
-        arc=3mm,
-        boxrule=1.2pt,
+        width=0.70\textwidth,
+        arc=2.5mm,
+        boxrule=1pt,
         colframe=navyblue,
         colback=white,
         boxsep=0pt,
         left=0pt, right=0pt, top=0pt, bottom=0pt,
-        halign=center,
-        valign=center
+        halign=center
     ]
-        \includegraphics[width=\linewidth]{figures/hero_forside.png}
+        \includegraphics[width=\linewidth, keepaspectratio]{figures/hero_forside.png}
     \end{tcolorbox}
     \end{center}
     
     \vfill
     
-    \begin{tcolorbox}[colback=lightgray, colframe=navyblue, width=0.95\textwidth, arc=2.5mm, boxrule=1pt, boxsep=1.5mm, center]
+    \begin{tcolorbox}[colback=lightgray, colframe=navyblue, width=0.92\textwidth, arc=2.5mm, boxrule=1pt, boxsep=1.5mm, center]
     \centering
     \small\sffamily
     \textbf{\color{navyblue}Faglig profil og kjernekonsept:}\\[0.2em]
